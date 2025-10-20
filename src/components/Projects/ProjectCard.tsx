@@ -1,5 +1,5 @@
 import type { Project } from '../../lib/types';
-import { GithubIcon, PreviewIcon } from '../../utils/icons'
+import { PreviewIcon } from '../../utils/icons'
 
 
 interface ProjectCardProps {
@@ -7,7 +7,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
-  const {title,cover,livePreview,githubLink,shortDescription} = data;
+  const {title,livePreview,cover,shortDescription} = data;
   
 
   return (

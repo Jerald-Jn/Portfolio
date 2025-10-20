@@ -31,6 +31,7 @@ export const skillList = [
 export const navigation = [
   { title: 'Home', href: '#home' },
   { title: 'Skills', href: '#skills', },
+   { title: 'Educations', href: '#educations' },
   { title: 'Projects', href: '#projects' },
   { title: 'Experiences', href: '#experiences' },
   { title: 'Contact Me', href: '#contact' },
