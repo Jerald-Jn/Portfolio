@@ -1,20 +1,15 @@
 import { useEffect, useState } from 'react'
 
-interface RoleSwitcherOptions {
-  roles: string[]
-  interval?: number
-}
-
-function useRoleSwitcher({ roles, interval = 1800 }: RoleSwitcherOptions): string {
-  const [role, setRole] = useState<string>(roles.length > 0 ? roles[0] : '')
+function useRoleSwitcher(roles: any) {
+  const [role, setRole] = useState<string>('')
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setRole((prev) => roles[(roles.indexOf(prev) + 1) % roles.length])
-    }, interval)
+    }, 1800)
 
     return () => clearInterval(intervalId)
-  }, [roles, interval])
+  }, [role])
 
   return role
 }

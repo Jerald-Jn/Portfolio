@@ -7,10 +7,11 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
-  const {title,cover,livePreview,githubLink,shortDescription} = data
+  const {title,cover,livePreview,githubLink,shortDescription} = data;
+  
 
   return (
-    <div className=" border-border flex flex-col justify-between rounded-[14px] border p-5 mx-auto hover:scale-110 
+    <div className="w-1/2 border-border flex flex-col justify-between rounded-[14px] border p-5 mx-auto hover:scale-110 
     transition-transform duration-1500">
       <div className=" items-start justify-between gap-2">
         <div className="flex-1">
@@ -34,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
 
       <div>
       
-        <div className="flex gap-5">
+        <div className="flex lg:gap-2">
           {livePreview && (
             <a
               href={livePreview}
@@ -43,16 +44,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
               target="_blank">
               <PreviewIcon className="h-auto w-[18px] md:w-5" />
               <span>Live Preview</span>
-            </a>
-          )}
-          {githubLink && (
-            <a
-              href={githubLink}
-              className="text-black dark:text-neutral-200
-               flex gap-2 text-sm underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 md:text-base"
-              target="_blank">
-              <GithubIcon className="w-[18px] md:w-5" />
-              <span>Github Link</span>
             </a>
           )}
         </div>

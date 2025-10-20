@@ -1,19 +1,19 @@
 'use client'
 
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import { BurgerIcon, CloseIcon } from '../../utils/icons'
-import {Logo} from './Logo'
+import { BurgerIcon, CloseIcon, Logo } from '../../utils/icons'
 import { navigation } from '../../appData'
 import useOutsideClick from '../hooks/useOutsideClick'
+import { useContext } from 'react'
+import { storeContext } from '../Context/storeContext'
 
 
 const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(false)
+  
+  const {isVisible,setIsVisible}=useContext(storeContext);
 
   const toggleMenu = () => setIsVisible(!isVisible)
   const navRef = useOutsideClick(() => setIsVisible(false))
-
 
   return (
     <nav ref={navRef} className="sticky left-0 top-0 border-b border-border w-full h-16 z-50 bg-white dark:bg-black/40 backdrop-blur-3xl">
@@ -62,8 +62,8 @@ const Navbar = () => {
             >
               <a
                 href={link.href}
-                className="block px-6 py-4 text-2xl font-semibold md:px-4 md:py-0 md:text-base 
-                hover:text-blue-400 transition-all duration-150"
+                className={`block px-6 py-4 text-2xl font-semibold md:px-4 md:py-0 md:text-base 
+                hover:text-blue-400 transition-all duration-150  ${isVisible?'border-b':''}`}
               >
                 {link.title}
               </a>

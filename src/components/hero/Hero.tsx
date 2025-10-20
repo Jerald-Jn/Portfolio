@@ -7,8 +7,8 @@ import useRoleSwitcher from '../hooks/useRoleSwitcher';
 const Hero = () => {
     const ellipseRef = useRotatingAnimation()
 
-  const roles = ['FULLSTACK DEVELOPER'];
-  const role=useRoleSwitcher({roles});
+  const roles = ['Java Developer', 'React.js Developer', 'Fullstack Developer'];
+  const role=useRoleSwitcher(roles);
   return (
     <section
     id='home'
@@ -51,7 +51,7 @@ const Hero = () => {
                   href={social.href} 
                   key={social.href}
                   target='_blank'
-                  className=" fill-black dark:fill-neutral-100"
+                  className=" fill-black dark:fill-neutral-100 hover:fill-neutral-500 dark:hover:fill-neutral-500"
                 >
                   {social.icon}
                 </a>
@@ -68,7 +68,8 @@ const Hero = () => {
               alt="Jerald Scooty - Full Stack Developer"
               className="object-contain w-full h-full p-10 sm:p-14 lg:p-15"
             />
-            <Ellipse ref={ellipseRef} 
+            <Ellipse 
+            ref={ellipseRef} 
             className="absolute top-0 left-0 size-56 transition-transform duration-500 
             ease-out sm:size-60 md:size-[20rem] lg:size-[25.75rem]"/>
           </div>
