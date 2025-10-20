@@ -33,7 +33,7 @@ export const navigation = [
   { title: 'Skills', href: '#skills', },
    { title: 'Educations', href: '#educations' },
   { title: 'Projects', href: '#projects' },
-  { title: 'Experiences', href: '#experiences' },
+  { title: 'Experience', href: '#experiences' },
   { title: 'Contact Me', href: '#contact' },
 ];
 
