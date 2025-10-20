@@ -9,8 +9,7 @@ import ProjectSection from "./components/Projects/ProjectSection"
 import Skills from "./components/Skills/Skills"
 import ThemeMenu from "./components/Theme/ThemeMenu"
 import { storeContext } from "./components/Context/storeContext"
-import { Educations } from "./components/Educations/educations"
-
+import { EducationsSection } from "./components/Educations/EducationsSection"
 function App() {
   const {isVisible}=useContext(storeContext);
   return (
@@ -20,7 +19,7 @@ function App() {
      <div className={`${isVisible && 'blur-sm'}`}>
       <Hero  />
       <Skills skills={skillList} />
-      <Educations />
+      <EducationsSection />
       <div className={`mx-auto my-8 max-w-[1200px] px-4 md:my-[3.75rem]`}>
         <ProjectSection projects={projects} />
         <div className="flex flex-col lg:flex-row gap-4 justify-around items-center">

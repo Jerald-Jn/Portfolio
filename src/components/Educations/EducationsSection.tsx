@@ -1,8 +1,7 @@
 import { educations } from "../../appData/personal";
 import { EducationCard } from "./EducationCard";
 
-export function Educations() {
-    console.log(educations)
+export function EducationsSection() {
     return (
         <section id="educations" className="lg:mx-10 p-4 md:p-10 my-5 text-black dark:text-neutral-100">
             <h2 className="text-center text-3xl font-semibold tracking-wider pb-2 uppercase">Educations</h2>
