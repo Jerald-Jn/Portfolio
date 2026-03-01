@@ -8,7 +8,7 @@ const ContactSection = (data:any) => {
        >
       <h2 className="text-center text-3xl font-semibold tracking-wider uppercase
         ">Contact me</h2>
-        <div className=" justify-center items-center text-black flex flex-col dark:text-neutral-200">
+        <div className="justify-center items-center text-black flex flex-col dark:text-neutral-200">
           <h3 className="text-3xl font-bold text-centerm mt-3">Let's Talk</h3>
           <p className="text-lg font-bold">Contact Information</p>
           <a
@@ -24,7 +24,10 @@ const ContactSection = (data:any) => {
             <PhoneIcon className='text-black dark:text-neutral-200' /> +91 7094949563
           </a>
         </div>
-      <div className='flex justify-center items-center lg:-mt-4 mt-4'>
+      <div className='flex justify-center items-center gap-4 lg:-mt-4 mt-4'>
+        <a className='text-center hover:bg-blue-400 bg-blue-500 h-10 w-40 p-2 rounded-2xl '
+          target='_blank'
+          href="/Jerald_Scooty_Resume.pdf">View CV</a>
         <a className='text-center hover:bg-blue-400 bg-blue-500 h-10 w-40 p-2 rounded-2xl '
         href="/Jerald_Scooty_Resume.pdf" download>Download CV</a>
       </div>
